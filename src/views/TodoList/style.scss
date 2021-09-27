@@ -1,0 +1,27 @@
+html {
+  background-color: #181818;
+  color: #FAFAFA;
+  font-family: sans-serif;
+}
+
+#TodoList {
+  margin: auto;
+  margin-top: 32px;
+  width: 50%;
+
+  .EditingTask {
+    display: flex;
+    flex-direction: column;
+
+    textarea {
+      height: 65px;
+      margin-bottom: 16px;
+    }
+
+    input[type=button] {
+      width: 200px;
+      height: 40px;
+      align-self: flex-end;
+    }
+  }
+}

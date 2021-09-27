@@ -1,0 +1,41 @@
+.TaskList {
+  border: 1px solid #FAFAFA;
+  width: 100%;
+
+  tr {
+    display: flex;
+    padding: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #383838;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #FAFAFA70;
+    }
+
+    td {
+      user-select: none;
+
+      &.TaskText {
+        width: 100%;
+      }
+
+      &.actions {
+        display: flex;
+        width: 50px;
+        justify-content: space-around;
+        font-weight: bold;
+
+        div:hover {
+          color: red;
+        }
+      }
+
+      &.done {
+        text-decoration: line-through;
+      }
+    }
+  }
+}
