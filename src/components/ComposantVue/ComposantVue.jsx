@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './test.scss';
+
 export default class ComposantVue extends React.Component {
   static propTypes = {
     params: PropTypes.string,
@@ -16,8 +18,9 @@ export default class ComposantVue extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="test">
         {this.subFunction()}
+        <input type="text" />
       </div>
     );
   }

@@ -1,10 +1,14 @@
 import React from 'react';
 
-import ComposantVue from './ComposantVue.jsx';
+import ComposantVue from './components/ComposantVue/ComposantVue.jsx';
 
 const App = () => (
   <div id="test" className="myClass">
-    <h1>Titre</h1>
+    <h2>Titre</h2>
+    <ComposantVue />
+    <ComposantVue />
+    <ComposantVue />
+    <ComposantVue />
     <ComposantVue />
   </div>
 );
