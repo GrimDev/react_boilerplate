@@ -1,15 +1,11 @@
 import React from 'react';
 
-import ComposantVue from './components/ComposantVue/ComposantVue.jsx';
+// import Home from './views/Home/Home.jsx';
+import TodoList from './views/TodoList/TodoList.jsx';
 
 const App = () => (
-  <div id="test" className="myClass">
-    <h2>Titre</h2>
-    <ComposantVue />
-    <ComposantVue />
-    <ComposantVue />
-    <ComposantVue />
-    <ComposantVue />
+  <div id="app">
+    <TodoList />
   </div>
 );
 
