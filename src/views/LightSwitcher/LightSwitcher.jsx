@@ -10,6 +10,7 @@ class LightSwitcher extends Component {
     putOn: PropTypes.func.isRequired,
     putOff: PropTypes.func.isRequired,
     switchLight: PropTypes.func.isRequired,
+    history: PropTypes.object.isRequired,
   }
 
   componentDidMount() {
@@ -21,12 +22,22 @@ class LightSwitcher extends Component {
   }
 
   render() {
+    console.log('----', this.props);
     return (
       <div id="LightSwitcher">
         La lumière est {this.props.lightState === 'OFF' ? 'éteinte' : 'allumée'}
 
         <input type="button" value="Alumer" onClick={() => this.props.switchLight(true)} />
         <input type="button" value="Eteindre" onClick={() => this.props.switchLight(false)} />
+
+        <input
+          type="button"
+          value="Aller sur la home"
+          onClick={() => {
+            console.log(this.props.history);
+            this.props.history.push('/');
+          }}
+        />
       </div>
     );
   }

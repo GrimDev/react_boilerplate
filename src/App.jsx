@@ -1,7 +1,11 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { I18nextProvider, useTranslation } from 'react-i18next';
 
-// import Home from './views/Home/Home.jsx';
+import i18n from './config/i18n';
+
+import Home from './views/Home/Home.jsx';
 // import TodoList from './views/TodoList/TodoList.jsx';
 import LightSwitcher from './views/LightSwitcher/LightSwitcher.jsx';
 
@@ -9,11 +13,21 @@ import configureStore from './configureStore';
 
 export const store = configureStore();
 
-const App = () => (
-  <div id="app">
-    <LightSwitcher />
-  </div>
-);
+const App = () => {
+  const { t } = useTranslation();
+  return (
+    <Router>
+      <I18nextProvider i18n={i18n}>
+        <div id="app">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path={`/${t('url1')}`} component={LightSwitcher} />
+          </Switch>
+        </div>
+      </I18nextProvider>
+    </Router>
+  );
+};
 
 export default function provider() {
   return (

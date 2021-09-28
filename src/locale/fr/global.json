@@ -1,0 +1,8 @@
+{
+  "yes": "Oui",
+  "no": "No",
+  "hello": "Bonjour {{ nom }} comment vas tu ?",
+  "banana": "Banane",
+  "banana_plural": "Bananes",
+  "url1": "lumiere"
+}

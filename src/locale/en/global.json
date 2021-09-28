@@ -1,0 +1,12 @@
+{
+  "yes": "Yes",
+  "no": "No",
+  "hello": "Hello {{ nom }} how are you ?",
+  "banana_one": "Banana",
+  "banana_other": "Bananas",
+  "errors_messages": {
+    "error1": "Error1",
+    "error2": "Error2"
+  },
+  "url1": "light"
+}
