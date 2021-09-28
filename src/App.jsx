@@ -8,6 +8,7 @@ import i18n from './config/i18n';
 import Home from './views/Home/Home.jsx';
 // import TodoList from './views/TodoList/TodoList.jsx';
 import LightSwitcher from './views/LightSwitcher/LightSwitcher.jsx';
+import TestApi from './views/TestApi/TestApi.jsx';
 
 import configureStore from './configureStore';
 
@@ -22,6 +23,7 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path={`/${t('url1')}`} component={LightSwitcher} />
+            <Route path="/test-api" component={TestApi} />
           </Switch>
         </div>
       </I18nextProvider>
