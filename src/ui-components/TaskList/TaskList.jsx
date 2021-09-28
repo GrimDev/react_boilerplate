@@ -18,6 +18,10 @@ export default class TaskList extends Component {
     canArchive: false,
   }
 
+  faitUnTruc() {
+    console.log('toto');
+  }
+
   renderTask(task, i) {
     return (
       <tr

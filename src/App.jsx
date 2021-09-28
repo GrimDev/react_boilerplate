@@ -1,16 +1,24 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 
 // import Home from './views/Home/Home.jsx';
-import TodoList from './views/TodoList/TodoList.jsx';
+// import TodoList from './views/TodoList/TodoList.jsx';
+import LightSwitcher from './views/LightSwitcher/LightSwitcher.jsx';
+
+import configureStore from './configureStore';
+
+export const store = configureStore();
 
 const App = () => (
   <div id="app">
-    <TodoList />
+    <LightSwitcher />
   </div>
 );
 
 export default function provider() {
   return (
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   );
 }

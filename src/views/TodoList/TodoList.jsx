@@ -83,6 +83,9 @@ export default class TodoList extends Component {
         <div className="current-tasks tasks">
           <h1>Taches en cours</h1>
           <TaskList
+            ref={(ref) => {
+              console.log(ref);
+            }}
             tasks={this.state.tasks}
             onClickTask={this.handleUpdateTask.bind(this)}
             onArchiveTask={this.handleArchiveTask.bind(this)}
