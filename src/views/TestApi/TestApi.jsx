@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+
+import ConnectedComponent from '../../superComponent/ConnectedComponent.jsx';
 
 import * as actions from '../../redux/global/actions';
 
 import './style.scss';
 
-class TestApi extends Component {
+class TestApi extends ConnectedComponent {
   static propTypes = {
     fetchApi: PropTypes.func.isRequired,
     isLoadingApi: PropTypes.bool.isRequired,
@@ -19,7 +21,8 @@ class TestApi extends Component {
     fetchApiSucceed: null,
   }
 
-  componentDidMount() {
+  componentDidMount(props) {
+    super.componentDidMount(props);
     this.props.fetchApi();
   }
 

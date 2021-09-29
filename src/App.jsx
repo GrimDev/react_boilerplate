@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { I18nextProvider, useTranslation } from 'react-i18next';
-import needsConnection from './hoc/needsConnection.jsx';
+// import needsConnection from './hoc/needsConnection.jsx';
 
 import i18n from './config/i18n';
 
@@ -24,7 +24,7 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path={`/${t('url1')}`} component={LightSwitcher} />
-            <Route path="/test-api" component={needsConnection(TestApi)} />
+            <Route path="/test-api" component={TestApi} />
           </Switch>
         </div>
       </I18nextProvider>
